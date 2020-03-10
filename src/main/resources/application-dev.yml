@@ -1,0 +1,66 @@
+server:
+#  servlet:
+#    context-path: /ceshi
+  port: 8086
+#  ssl:
+#    key-store: classpath:javaboy.p12
+#    key-alias: tomcathttps
+#    key-store-password: 123456
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=Asia/Shanghai
+    connection-test-query: SELECT 1
+
+#日志级别
+logging:
+  file:
+    max-size: 50MB
+    max-history: 30
+  level:
+    root: info
+    org.springframework.boot.actuate: info
+    org.zalando.logbook: TRACE
+    com.sishu: debug
+    net.devh.boot: debug
+    com.zaxxer.hikari: debug
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%t]){faint} %clr(%-40.40logger{39}){cyan}[lineno:%line]    %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39}[lineno:%line]: %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+  path: /var/log/
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  global-config:
+    db-config:
+      # 主键策略
+      id-type: NONE
+      # 表名前缀
+      table-prefix: t
+      # 表名是否使用下划线间隔，默认：是
+      table-underline: true
+  # 配置实体类包地址
+  type-aliases-package: com.example.demo.entity
+  # 驼峰转下划线
+  configuration:
+    map-underscore-to-camel-case: true
+
+my:
+  servers:
+    - dev.example.com
+    - another.example.com
+
+redis:
+  redisConfigs:
+    - host: 192.168.66.128
+      port: 6379
+    - host: 192.168.66.129
+      port: 6380
+
+javaboy:
+  name: zhangsan
+  msg: java
+

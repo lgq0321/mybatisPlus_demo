@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    include: dev
+    
+#springfox:
+#  documentation:
+#    swagger:
+#      v2:
+#        path: /api/pub/system/api-docs

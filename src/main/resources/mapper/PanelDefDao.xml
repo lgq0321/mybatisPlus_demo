@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.PanelDefDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.PanelDef">
+        <id column="id" property="id" />
+        <result column="category" property="category" />
+        <result column="name" property="name" />
+        <result column="desc" property="desc" />
+        <result column="period" property="period" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="is_delete" property="isDelete" />
+        <result column="chart_id" property="chartId" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="url" property="url" />
+        <result column="logo_url" property="logoUrl" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, category, name, desc, period, created_at, updated_at, is_delete, chart_id, tenant_id, url, logo_url
+    </sql>
+
+</mapper>
