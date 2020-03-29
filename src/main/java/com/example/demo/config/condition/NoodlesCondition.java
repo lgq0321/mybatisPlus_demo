@@ -15,6 +15,6 @@ import java.util.Objects;
 public class NoodlesCondition implements Condition {
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-        return Objects.equals(context.getEnvironment().getProperty("people"), "南方人");
+        return Objects.equals(context.getEnvironment().getProperty("people"), "456");
     }
 }

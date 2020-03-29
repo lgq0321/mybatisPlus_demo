@@ -1,6 +1,4 @@
-package com.example.demo.service.impl;
-
-import com.example.demo.service.Food;
+package com.example.demo.config.condition;
 
 /**
  * @version 1.0

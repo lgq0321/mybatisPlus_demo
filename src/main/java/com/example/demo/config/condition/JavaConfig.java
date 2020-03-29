@@ -1,8 +1,8 @@
-package com.example.demo.config;
+package com.example.demo.config.condition;
 
-import com.example.demo.service.Food;
-import com.example.demo.service.impl.Noodles;
-import com.example.demo.service.impl.Rice;
+import com.example.demo.config.condition.Food;
+import com.example.demo.config.condition.Noodles;
+import com.example.demo.config.condition.Rice;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -16,12 +16,12 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class JavaConfig {
     @Bean("food")
-    @Profile("南方人")
+    @Profile("456")
     Food rice() {
         return new Rice();
     }
     @Bean("food")
-    @Profile("北方人")
+    @Profile("123")
     Food noodles() {
         return new Noodles();
     }

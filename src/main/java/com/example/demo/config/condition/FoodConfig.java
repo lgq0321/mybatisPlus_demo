@@ -1,10 +1,10 @@
-package com.example.demo.config;
+package com.example.demo.config.condition;
 
 import com.example.demo.config.condition.NoodlesCondition;
 import com.example.demo.config.condition.RiceCondition;
-import com.example.demo.service.Food;
-import com.example.demo.service.impl.Noodles;
-import com.example.demo.service.impl.Rice;
+import com.example.demo.config.condition.Food;
+import com.example.demo.config.condition.Noodles;
+import com.example.demo.config.condition.Rice;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;

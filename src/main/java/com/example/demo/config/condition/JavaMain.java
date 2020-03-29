@@ -1,7 +1,5 @@
 package com.example.demo.config.condition;
 
-import com.example.demo.config.JavaConfig;
-import com.example.demo.service.Food;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -13,7 +11,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class JavaMain {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-        ctx.getEnvironment().setActiveProfiles("南方人");
+//        ctx.getEnvironment().setActiveProfiles("南方人");
+        ctx.getEnvironment().setActiveProfiles("123");
         ctx.register(JavaConfig.class);
         ctx.refresh();
         Food food = (Food) ctx.getBean("food");

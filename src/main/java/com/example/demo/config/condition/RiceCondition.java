@@ -15,6 +15,6 @@ import java.util.Objects;
 public class RiceCondition implements Condition {
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-        return Objects.equals(context.getEnvironment().getProperty("people"), "北方人");
+        return Objects.equals(context.getEnvironment().getProperty("people"), "123");
     }
 }

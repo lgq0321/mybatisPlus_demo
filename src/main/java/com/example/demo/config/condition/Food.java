@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.demo.config.condition;
 
 /**
  * @version 1.0
